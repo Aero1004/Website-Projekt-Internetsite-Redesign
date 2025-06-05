@@ -7,6 +7,26 @@
   position: relative;
   padding: 1rem;
   background-color: #E9E6E2;
+  gap: 3rem;
+}
+.nav__branding{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav__slogan {
+  display: none; 
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+
+  color: #B87333; 
+  margin-left: 2.5rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  opacity: 0.95;
 }
 
 .logo {
@@ -34,9 +54,7 @@
 .nav__list {
   display: none;
   flex-direction: column;
-  
   width: 100%;
-  
   margin-top: 1rem;
 }
 
@@ -60,7 +78,6 @@
  
   
 }
-
 .nav__item .active {
   color: #fff;
   text-decoration: underline;
@@ -93,6 +110,17 @@
 
 /* ========== DESKTOP ANSICHT ========== */
 @media (min-width: 768px) {
+
+
+  .nav__slogan {
+    display: block;
+  }
+
+  .nav__branding {
+    flex: 0 0 auto;
+  }
+
+
   .hamburger {
     display: none;
   }
@@ -111,7 +139,7 @@
     display: flex !important;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 0;
     background: transparent;
   }
@@ -122,6 +150,7 @@
     background: none;
     list-style: none;
     font-size: 1.3rem;
+    border: none;
   }
 
   .nav__item .active {
