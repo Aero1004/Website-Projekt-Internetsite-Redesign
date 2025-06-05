@@ -34,9 +34,9 @@
 .nav__list {
   display: none;
   flex-direction: column;
-  gap: 0.5rem;
+  
   width: 100%;
-  background-color: #2B2B2B;
+  
   margin-top: 1rem;
 }
 
@@ -48,10 +48,13 @@
   text-align: center;
   padding: 1.5rem;
   list-style: none;
+  background-color: #2B2B2B;
+  border: #3d3d3d 1px solid;
 }
 
 .nav__item a {
   color: #B87333;
+  font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
  
@@ -68,9 +71,16 @@
   display: none;
   flex-direction: column;
   background-color: #454545;
-  list-style: none;
+  list-style: none; 
 }
-
+.dropdown__item{
+    gap: 1ch;
+    border: 1px solid #2B2B2B;
+    
+}
+.dropdown__item:hover{
+    background-color: #3d3d3d;
+}
 .nav__item:hover .dropdown__list {
   display: flex;
 }
@@ -117,7 +127,6 @@
   .nav__item .active {
   color: #454545;
 }
-
   .dropdown__list {
     position: absolute;
     top: 100%;
