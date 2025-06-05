@@ -1,0 +1,116 @@
+.hero{
+    background-color: #1E1E1E;
+    text-align: center;
+}
+.hero h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--neutral-color);
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+.hero h1 span{
+    color: var(--accent);
+}
+
+.hero-subline {
+  color: #E0E0E0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 1rem 1rem;
+}
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 1rem 1rem;
+}
+
+.card{
+    max-width: 320px;
+    margin: 0 auto;
+     background-color: #2B2B2B;
+    border-radius: 12px;
+    overflow: hidden;  
+}
+.card img{
+width: 100%;
+height: auto;
+display: block;
+}
+
+.card__info {
+  padding: 1rem;
+}
+.card__title{
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+.card__details{
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+}
+.card__info p{
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    text-align: left;
+    hyphens: auto;
+    color: #d1d1d1; 
+}
+
+.card__info blockquote{
+    font-style: italic;
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #e0e0e0;
+}
+
+
+.card__btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    background-color: #B87333;
+    color: var(--neutral-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media(min-width: 768px){
+    .card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 1rem 1rem;
+}
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(184, 115, 51, 0.2);
+    }
+
+ .card__details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  .card:hover .card__details {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+ 
