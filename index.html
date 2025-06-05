@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Pfalzschliff</title>
 </head>
 <body>
-    <header>
-        <nav class="main-nav">
-            <div class="logo-wrapper">
-                <a href="#" class="logo" aria-label="Pfalzschliff-Logo">
-                    <img src="/assets/svg/Pfalzschliff Logo (2).svg" alt="Pfalzschliff-Logo">
-                </a>
-                <p class="logo__name">Pfalzschliff</p>
+   <header>
+        <nav class="navbar">
+            <div class="nav__logo">
+                <img src="/assets/images/Redesign_logo.png" class="logo" alt="Pfalzschlifflogo">
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
             <ul class="nav__list">
-                <li class="nav__item"><a href="#" aria-label="Zur Startseite">Startseite</a></li>
-                <li class="nav__item"><a href="#" aria-label="Zur Galerie">Galerie</a></li>
-                <li class="nav__item"><a href="#" aria-label="Zu Kontakt">Kontakt</a></li>
-
-                <li class="nav__item nav__item--has-dropdown"><a href="#">Schleifpreise</a>
-                    <ul class="nav__dropdown">
-                        <li class="dropdown__item"><a href="" aria-label="Schleifpreise Messer">Messer</a></li>
-                        <li class="dropdown__item"><a href="" aria-label="Schleifpreise Werkzeug">Werkzeug</a></li>
-                        <li class="dropdown__item"><a href="" aria-label="Schleifpreise Outdoor-Geräte">Outdoor-Geräte</a></li>
-                        <li class="dropdown__item"><a href="" aria-label="Schleifpreise Extras">Extras</a></li>
-                    </ul>
+                <li class="nav__item"><a href="#" class="active">Startseite</a></li>
+                <li class="nav__item"><a href="#">Preise &#9662</a>
+                    <div class="nav-dropdown">
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item"><a href="">Messer</a></li>
+                            <li class="dropdown__item"><a href="">Werkzeuge</a></li>
+                            <li class="dropdown__item"><a href="">Outdoorgeräte</a></li>
+                            <li class="dropdown__item"><a href="">Extras</a></li>
+                        </ul>
+                    </div>
                 </li>
-
-                <li class="nav__item"><a href="#" aria-label="Zu Wissenwertes">Wissenswertes</a></li>
-                <li class="nav__item"><a href="#" aria-label="Zu unseren Partnern">Partner</a></li>
+                <li class="nav__item"><a href="#">Galerie</a></li>
+                <li class="nav__item"><a href="#">Kontakt</a></li>
             </ul>
         </nav>
     </header>

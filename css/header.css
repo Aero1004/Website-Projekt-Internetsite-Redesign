@@ -1,0 +1,148 @@
+/* ========== Basisstil (MOBILE FIRST) ========== */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+  background-color: #E9E6E2;
+}
+
+.logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #B87333;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Navigation mobil */
+.nav__list {
+  display: none;
+  flex-direction: column;
+  
+  width: 100%;
+  
+  margin-top: 1rem;
+}
+
+.menu-toggle:checked ~ .nav__list {
+  display: flex;
+}
+
+.nav__item {
+  text-align: center;
+  padding: 1.5rem;
+  list-style: none;
+  background-color: #2B2B2B;
+  border: #3d3d3d 1px solid;
+}
+
+.nav__item a {
+  color: #B87333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+ 
+  
+}
+
+.nav__item .active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Dropdown-Menü */
+.dropdown__list {
+  display: none;
+  flex-direction: column;
+  background-color: #454545;
+  list-style: none; 
+}
+.dropdown__item{
+    gap: 1ch;
+    border: 1px solid #2B2B2B;
+    
+}
+.dropdown__item:hover{
+    background-color: #3d3d3d;
+}
+.nav__item:hover .dropdown__list {
+  display: flex;
+}
+
+.dropdown__item a {
+  padding: 0.5rem 1rem;
+  color: #B87333;
+  display: block;
+}
+
+/* ========== DESKTOP ANSICHT ========== */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__list {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-top: 0;
+    background: transparent;
+  }
+
+  .nav__item {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: none;
+    list-style: none;
+    font-size: 1.3rem;
+  }
+
+  .nav__item .active {
+  color: #454545;
+}
+  .dropdown__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    display: none;
+  }
+  .dropdown__item:hover{
+  background-color: #4f4f4f; 
+}
+.dropdown__item{
+  padding: 1rem;
+  border: 1px solid #3d3d3d;  
+}
+
+  .nav__item:hover .dropdown__list {
+    display: block;
+  }
+}
