@@ -13,7 +13,10 @@
 
 :root{
   --neutral-color: #FFFFFF;
+  --background-dark:#1e1e1e;
+  --background-light:#E9E6E2;
   --accent: #B87333;
+  --text-main: #E9E6E2;
 }
 
 
