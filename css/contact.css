@@ -1,0 +1,320 @@
+.contact {
+    padding: 3rem 1.5rem;
+    background-color: var(--background-dark);
+    color: var(--text-main);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ========== BACKGROUND IMG for DESKTOP VIEW ==============*/
+@media (min-width: 1024px) {
+    .contact::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(/assets/images/contact-section/Contact-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: 1;
+    }
+
+    /*======== DARK OVERLAY for BACKGROUND IMG ==================*/
+    .contact::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, 
+            rgba(0, 0, 0, 0.85) 0%, 
+            rgba(0, 0, 0, 0.75) 30%, 
+            rgba(0, 0, 0, 0.8) 70%, 
+            rgba(0, 0, 0, 0.9) 100%);
+        z-index: 2;
+    }
+}
+
+.contact-overlay {
+    background-color: transparent;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.contact__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*============ CONTACT-INFOS =================*/
+.contact__info {
+    text-align: center;
+}
+
+.contact__heading {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.contact__info p {
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__info li {
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+    text-align: left;
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.contact__info li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.contact__info li svg {
+    flex-shrink: 0;
+    color: var(--accent);
+    width: 1.5em;
+    height: 1.5em;
+    
+  
+}
+.contact__info li .icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8em;
+    height: 1.8em;
+    
+    flex-shrink: 0;
+}
+.contact__info li .text-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contact__info li strong {
+    font-weight: 600;
+    margin-right: 0.3rem;
+    color: var(--accent);
+}
+
+/*=============== FORM ===================*/
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*======= Mobile Simple BG for CONTACT FORM =========*/
+@media (max-width: 1023px) {
+    .contact__form {
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/*======== Glass Style - CONTACT FORM -DESKTOP =============*/
+@media (min-width: 1024px) {
+    .contact__form {
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.contact__form input,
+.contact__form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    background-color: #2b2b2b;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+    outline: 2px solid var(--accent);
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.contact__form textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/*=============== FORM-BUTTON ===================*/
+.contact__form button {
+    background-color: var(--accent);
+    color: var(--text-main);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact__form button:hover {
+    background-color: #a45f28;
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.contact__form button:active {
+    transform: scale(0.98);
+}
+
+/*=============== RESPONSIVE BREAKPOINTS ===================*/
+
+/* ============== TABLET =============== */
+@media (min-width: 768px) {
+    .contact {
+        padding: 4rem 2rem;
+    }
+    
+    .contact-overlay {
+        padding: 3rem 2rem;
+    }
+    
+    .contact__wrapper {
+        gap: 3rem;
+    }
+    
+    .contact__info ul {
+        gap: 2rem;
+    }
+    
+    .contact__info li {
+        justify-content: flex-start;
+        padding: 0.75rem 1rem;
+    }
+    
+    .contact__form {
+        gap: 1.5rem;
+    }
+    
+    .contact__form button {
+        width: auto;
+        min-width: 200px;
+    }
+}
+
+/*============== DESKTOP 1024 ====================== */
+@media (min-width: 1024px) {
+    .contact {
+        padding: 5rem 2rem;
+    }
+    
+    .contact__wrapper {
+        flex-direction: row;
+        gap: 4rem;
+        align-items: flex-start;
+    }
+    
+    .contact__info {
+        flex: 1;
+        text-align: left;
+        max-width: 500px;
+    }
+    
+    .contact__info ul {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .contact__form {
+        flex: 1;
+        max-width: 500px;
+        margin: 0;
+    }
+    
+    .contact__heading {
+        text-align: left;
+    }
+    
+    .contact__info p {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* ============ LARGE-DESKTOP ================= */
+@media (min-width: 1200px) {
+    .contact {
+        padding: 6rem 2rem;
+    }
+    
+    .contact-overlay {
+        padding: 4rem;
+    }
+    
+    .contact__wrapper {
+        gap: 5rem;
+    }
+}
