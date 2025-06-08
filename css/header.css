@@ -6,7 +6,7 @@
 	align-items: center;
 	position: relative;
 	padding: 1rem 2rem;
-	background-color: #E9E6E2;
+	background-color: var(--background-light);
 	gap: 2rem;
 	min-height: auto;
 }
@@ -17,6 +17,7 @@
 	align-items: center;
 	gap: 0.5rem;
 	width: 100%;
+	cursor: pointer;
 }
 
 .nav__slogan {
@@ -50,7 +51,7 @@
 	top: 1rem;
 	right: 1rem;
 	font-size: 2rem;
-	color: #B87333;
+	color: var(--accent);
 	cursor: pointer;
 	z-index: 1000;
 }
@@ -79,20 +80,12 @@
 	border: #3d3d3d 1px solid;
 	transition: background-color 0.3s ease;
 }
-.nav__item:hover {
-	background-color: #3d3d3d;
-}
 
 .nav__item a {
-	color: #B87333;
+	color: var(--accent);
 	font-size: 1.2rem;
 	font-weight: 600;
 	text-decoration: none;
-}
-
-.nav__item .active {
-	color: #fff;
-	font-weight: 700;
 }
 
 
@@ -199,15 +192,14 @@
 }
 
 
-/* ========== DESKTOP VIEW (ab 1200px) ========== */
+/* ========== DESKTOP VIEW (min-width 1200px) ========== */
 @media (min-width: 1200px) {
 	.navbar {
 		display: grid;
 		grid-template-columns: auto 1fr auto;
 		align-items: center;
 		padding: 1rem clamp(1rem, 2vw, 2rem);
-		gap: 2rem;
-		
+		gap: 2rem;	
 	}
 	
 	.nav__branding {
@@ -215,7 +207,6 @@
 		align-items: center;
 		gap: 1rem;
 		justify-self: start;
-		
 	}
 	
 	.nav__slogan {
@@ -258,12 +249,13 @@
 	.nav__item a {
 		position: relative;
 		text-transform: uppercase;
-		letter-spacing: 0.5px;
+		letter-spacing: 0.8px;
 		padding: 0.5rem clamp(0.5rem, 1vw, 1rem);
 		transition: all 0.3s ease;
-		color: #B87333;
+		color: var(--accent);
 		text-decoration: none;
 		font-weight: 600;
+		transition: color 0.3s ease, transform 0.3s ease;
 	}
 	
 	.nav__item a::after {
@@ -273,7 +265,7 @@
 		bottom: -3px;
 		height: 2px;
 		width: 0;
-		background-color: #B87333;
+		background-color: var(--accent);
 		transition: width 0.3s ease;
 	}
 	
@@ -282,11 +274,9 @@
 	}
 	
 	.nav__item a:hover {
-		color: #8B5A2B;
-	}
-	
-	.nav__item .active {
-		color: #454545;
+		color: #d0a54f;
+		text-shadow: 0 0 4px rgba(184, 115, 51, 0.2);
+		transform: translateY(-2px);
 	}
 	
 	.dropdown__list {
