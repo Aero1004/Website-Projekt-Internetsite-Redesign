@@ -47,6 +47,7 @@ footer {
 .footer_nav ul a {
 	display: block;
 	color: #E9E6E2;
+	font-family: "Inter", sans-serif;
 	font-size: 1.2rem;
 	font-weight: 500;
 	text-decoration: none;

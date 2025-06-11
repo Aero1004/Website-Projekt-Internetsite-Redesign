@@ -9,6 +9,7 @@
 	background-color: var(--background-light);
 	gap: 2rem;
 	min-height: auto;
+	font-family: "Inter", sans-serif;
 }
 
 .nav__branding {

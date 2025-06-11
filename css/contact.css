@@ -75,6 +75,7 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Inter", sans-serif;
 }
 
 .contact__info ul {
@@ -87,6 +88,7 @@
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Inter", sans-serif;
 }
 
 .contact__info li {
