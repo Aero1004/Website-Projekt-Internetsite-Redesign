@@ -37,6 +37,8 @@
 	line-height: 1.6;
 	opacity: 0;
 	animation: fadeInUp 1s ease forwards 0.3s;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
 }
 
 .services__intro::after {
