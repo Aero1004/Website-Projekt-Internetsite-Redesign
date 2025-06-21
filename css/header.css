@@ -90,36 +90,6 @@
 }
 
 
-/*========== DROPDOWN-MENÜ ==========*/
-
-.dropdown__list {
-	display: none;
-	flex-direction: column;
-	background-color: #454545;
-	list-style: none;
-	transition: all 0.3 ease;
-}
-
-.dropdown__item {
-	gap: 1ch;
-	border: 1px solid #2B2B2B;
-	transition: background-color 0.3s ease;
-}
-
-.dropdown__item:hover {
-	background-color: #3d3d3d;
-}
-
-.nav__item:hover .dropdown__list {
-	display: flex;
-}
-
-.dropdown__item a {
-	padding: 0.5rem 1rem;
-	color: #B87333;
-	display: block;
-}
-
 /* ========== TABLET VIEW ========== */
 @media (min-width: 768px) and (max-width: 1199px) {
 	.navbar {
@@ -245,6 +215,8 @@
 		font-size: clamp(1.1rem, 1.3vw, 1.4rem);
 		border: none;
 		flex-shrink: 0;
+		/* Entfernt den transform hier */
+		transition: transform 0.3s ease;
 	}
 	
 	.nav__item a {
@@ -252,11 +224,14 @@
 		text-transform: uppercase;
 		letter-spacing: 0.8px;
 		padding: 0.5rem clamp(0.5rem, 1vw, 1rem);
-		transition: all 0.3s ease;
 		color: var(--accent);
 		text-decoration: none;
 		font-weight: 600;
+		/* Vereinfacht die Transition - nur für Farbe und Transform */
 		transition: color 0.3s ease, transform 0.3s ease;
+		/* Wichtig: Startzustand für Transform definieren */
+		transform: translateY(0);
+		display: inline-block; /* Wichtig für Transform-Effekte */
 	}
 	
 	.nav__item a::after {
@@ -277,37 +252,8 @@
 	.nav__item a:hover {
 		color: #d0a54f;
 		text-shadow: 0 0 4px rgba(184, 115, 51, 0.2);
-		transform: translateY(-2px);
+		/* Bewegt den Link nach oben */
+		transform: translateY(-4px);
 	}
 	
-	.dropdown__list {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		min-width: 200px;
-		visibility: hidden;
-		z-index: 9999;
-		transition: opacity 0.3s ease, transform 0.3s ease;
-		opacity: 0;
-		transform: translateY(10px);
-		pointer-events: none;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-	}
-	
-	.nav__item:hover .dropdown__list {
-		opacity: 1;
-		transform: translateY(0);
-		pointer-events: auto;
-		visibility: visible;
-		display: flex;
-	}
-	
-	.dropdown__item:hover {
-		background-color: #4f4f4f;
-	}
-	
-	.dropdown__item {
-		padding: 1rem;
-		border: 1px solid #3d3d3d;
-	}
 }

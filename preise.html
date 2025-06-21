@@ -17,16 +17,8 @@
             <input type="checkbox" id="menu-toggle" class="menu-toggle" />
             <label for="menu-toggle" class="hamburger">&#9776;</label>
             <ul class="nav__list">
-                <li class="nav__item"><a href="#">Startseite</a></li>
-                <li class="nav__item"><a href="#">Preise &#9662</a>
-                    <div class="nav-dropdown">
-                        <ul class="dropdown__list">
-                            <li class="dropdown__item"><a href="">Messer</a></li>
-                            <li class="dropdown__item"><a href="">Werkzeuge</a></li>
-                            <li class="dropdown__item"><a href="">Outdoorgeräte</a></li>
-                            <li class="dropdown__item"><a href="">Extras</a></li>
-                        </ul>
-                    </div>
+                <li class="nav__item"><a href="/index.html">Startseite</a></li>
+                <li class="nav__item"><a href="/preise.html">Preise</a>
                 </li>
                 <li class="nav__item"><a href="#">Galerie</a></li>
                 <li class="nav__item"><a href="#contact">Kontakt</a></li>
@@ -51,7 +43,7 @@
     <div class="price-list">
 
       <!-- Messer -->
-      <div class="price-category" data-category="messer">
+      <div class="price-category" data-category="messer" id="messer">
         <h3>Messer</h3>
         <ul>
           <li>Messer bis 8 cm <span>5,00 €</span></li>
@@ -65,7 +57,7 @@
       </div>
 
       <!-- Scheren -->
-      <div class="price-category" data-category="scheren">
+      <div class="price-category" data-category="scheren" id="scheren">
         <h3>Scheren & Klingen</h3>
         <ul>
           <li>Schere <span>5,00 – 8,00 €</span></li>
@@ -76,7 +68,7 @@
       </div>
 
       <!-- Werkzeuge -->
-      <div class="price-category" data-category="werkzeuge">
+      <div class="price-category" data-category="werkzeuge" id="werkzeuge">
         <h3>Werkzeuge & Geräte</h3>
         <ul>
           <li>Hobelmesser <span>7,00 €</span></li>
@@ -89,7 +81,7 @@
       </div>
 
       <!-- Küchengeräte -->
-      <div class="price-category" data-category="küche">
+      <div class="price-category" data-category="küche" id="kuechengeraete">
         <h3>Küchengeräte</h3>
         <ul>
           <li>Fleischwolf / Scheibe <span>5,00 €</span></li>
@@ -98,7 +90,7 @@
       </div>
 
       <!-- Zusatz -->
-      <div class="price-category" data-category="zusatz">
+      <div class="price-category" data-category="zusatz" id="zusatzleistungen">
         <h3>Zusatzleistungen</h3>
         <ul>
           <li>Premiumschliff <span>+3,50 €</span></li>
@@ -111,7 +103,7 @@
     </div>
 
     <p class="footer-note">
-      * Änderungen vorbehalten. Fehlender Artikel? <a href="#contact">Kontaktieren Sie uns</a>.
+      * Änderungen vorbehalten. Fehlender Artikel? <a href="/index.html#contact">Kontaktieren Sie uns</a>.
     </p>
   </div>
 </section>
@@ -128,8 +120,8 @@
 
                 <nav class="footer_nav">
                     <ul>
-                        <li><a href="#">Startseite</a></li>
-                        <li><a href="">Preise</a></li>
+                        <li><a href="/index.html">Startseite</a></li>
+                        <li><a href="/preise.html">Preise</a></li>
                         <li><a href="">Services</a></li>
                         <li><a href="">Galerie</a></li>
                         <li><a href="#contact">Kontakt</a></li>
