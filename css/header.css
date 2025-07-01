@@ -215,7 +215,6 @@
 		font-size: clamp(1.1rem, 1.3vw, 1.4rem);
 		border: none;
 		flex-shrink: 0;
-		/* Entfernt den transform hier */
 		transition: transform 0.3s ease;
 	}
 	
@@ -227,11 +226,9 @@
 		color: var(--accent);
 		text-decoration: none;
 		font-weight: 600;
-		/* Vereinfacht die Transition - nur für Farbe und Transform */
 		transition: color 0.3s ease, transform 0.3s ease;
-		/* Wichtig: Startzustand für Transform definieren */
 		transform: translateY(0);
-		display: inline-block; /* Wichtig für Transform-Effekte */
+		display: inline-block;
 	}
 	
 	.nav__item a::after {
@@ -252,7 +249,6 @@
 	.nav__item a:hover {
 		color: #d0a54f;
 		text-shadow: 0 0 4px rgba(184, 115, 51, 0.2);
-		/* Bewegt den Link nach oben */
 		transform: translateY(-4px);
 	}
 	
